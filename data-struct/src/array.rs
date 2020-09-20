@@ -15,6 +15,7 @@ fn main() {
 
     let _slice = & _num_array[0..2]; // _slice is reference of _num_array
     println!("slice : {:?}", _slice);
-    print_type_of(&_num_array);
-    print_type_of(&_slice);
+
+    // length of array
+    println!("num_array length: {}", _num_array.len());
 }
