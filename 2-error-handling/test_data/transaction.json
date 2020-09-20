@@ -1,0 +1,5 @@
+[
+    {"from":"Matt", "to":"Andy","amount":365},
+    {"from":"Matt", "to":"Jane","amount":100},
+    {"from":"Peter", "to":"May","amount":30}
+]
