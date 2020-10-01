@@ -2,7 +2,7 @@
 // https://www.codingame.com/playgrounds/365/getting-started-with-rust/primitive-data-types
 
 #[allow(dead_code)]
-fn main() {
+pub fn print_num() {
     let _bool: bool = true;
     println!("bool : {}", _bool);
 

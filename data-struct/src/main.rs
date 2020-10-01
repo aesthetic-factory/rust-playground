@@ -1,3 +1,11 @@
+mod numeric;
+mod array;
+mod string;
+mod tuple;
+
 fn main() {
-    println!("Hello, world!");
+    //numeric::print_num();
+    array::print_array();
+    //string::print_string();
+    tuple::print_tuple();
 }
