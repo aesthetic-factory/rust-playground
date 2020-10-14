@@ -1,9 +1,15 @@
-#[allow(dead_code)]
+use rand::{thread_rng, Rng};
 
+const SIZE:usize = 10;
+
+#[allow(dead_code)]
 pub fn print_array() {
     // an array with 16 bit unsigned integer
     // fixed size
     let _num_array: [u16; 5] = [0, 1, 2, 3, 4];
+
+    // All elements can be initialized to the same value
+    let zeros: [i32; 500] = [0; 500];
 
     // print whole array with ":?"
     println!("num_array : {:?}", _num_array);
@@ -23,4 +29,7 @@ pub fn print_array() {
     // print whole array with ":?"
     println!("tup_array : {:?}", _tup_array);
 
+    let mut _rand_array: [u32; SIZE] = [0; SIZE];
+    thread_rng().fill(&mut _rand_array[..]);
+    println!("rand_array : {:?}", _rand_array);
 }
