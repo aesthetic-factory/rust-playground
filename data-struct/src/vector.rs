@@ -1,7 +1,7 @@
 use rand::{thread_rng, Rng};
 use std::vec::Vec;
 
-const SIZE:usize = 10;
+const SIZE: usize = 10;
 
 fn print_summary(label: &str, vector: &Vec<u64>) {
     println!(
@@ -31,13 +31,17 @@ pub fn print_vector() {
     print_summary("vec_u64", &vec_u64);
     print_summary("vec_cap", &vec_cap);
 
-
     vec_cap.push(1);
     vec_cap.push(2); // still no need to reallocate memory
     vec_cap.push(3); // execess cap, need to reallocate memory
     print_summary("vec_cap", &vec_cap);
 
-    let mut _rand_vec= vec![0; SIZE];
+    let mut _rand_vec = vec![0; SIZE];
     thread_rng().fill(&mut _rand_vec[..]);
     println!("rand_vec : {:?}", _rand_vec);
+
+    vec_w_init_val.swap(0, 3);
+    print_summary("vec_w_init_val after swap", &vec_w_init_val);
+    vec_w_init_val.pop();
+    print_summary("vec_w_init_val after pop", &vec_w_init_val);
 }

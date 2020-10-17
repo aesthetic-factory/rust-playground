@@ -1,6 +1,6 @@
 use rand::{thread_rng, Rng};
 
-const SIZE:usize = 10;
+const SIZE: usize = 10;
 
 #[allow(dead_code)]
 pub fn print_array() {
@@ -9,7 +9,7 @@ pub fn print_array() {
     let _num_array: [u16; 5] = [0, 1, 2, 3, 4];
 
     // All elements can be initialized to the same value
-    let zeros: [i32; 500] = [0; 500];
+    let _zeros: [i32; 500] = [0; 500];
 
     // print whole array with ":?"
     println!("num_array : {:?}", _num_array);
