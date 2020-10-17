@@ -7,6 +7,7 @@ fn get_phone(name: &str, map: &HashMap<&str, u32>) {
     }
 }
 
+#[allow(dead_code)]
 pub fn print_hash_map() {
     let mut phone_book: HashMap<&str, u32> = HashMap::new();
     let mut phone_book_lite: HashMap<&str, u32> = HashMap::with_capacity(1);

@@ -1,4 +1,5 @@
 use rand::{thread_rng, Rng};
+use std::time::Instant;
 use std::vec::Vec;
 
 const SIZE: usize = 10;
@@ -12,6 +13,7 @@ fn print_summary(label: &str, vector: &Vec<u64>) {
         vector
     );
 }
+
 #[allow(dead_code)]
 pub fn print_vector() {
     let mut vec_w_init_val = vec![1, 2, 3];
@@ -44,4 +46,29 @@ pub fn print_vector() {
     print_summary("vec_w_init_val after swap", &vec_w_init_val);
     vec_w_init_val.pop();
     print_summary("vec_w_init_val after pop", &vec_w_init_val);
+}
+
+fn simd() -> std::vec::Vec<f32> {
+    // #[cfg(all(any(target_arch = "x86", target_arch = "x86_64"), target_feature = "avx2"))]
+
+    // if is_x86_feature_detected!("avx2") {
+    //     println!("avx2");
+    // }
+    let lots_of_3s = (&[-123.456f32; 4096][..])
+        .iter()
+        .map(|v| 9.0 * v.abs().sqrt().sqrt().recip().ceil().sqrt() - 4.0 - 2.0)
+        .collect::<Vec<f32>>();
+    lots_of_3s
+}
+
+#[allow(dead_code)]
+pub fn simd_benechmark() {
+    let start = Instant::now();
+
+    for _ in 1..10000 {
+        simd();
+    }
+
+    let duration = start.elapsed();
+    println!("SIMD time elapsed is: {:?}", duration);
 }

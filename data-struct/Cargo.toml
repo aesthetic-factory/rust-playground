@@ -1,8 +1,8 @@
 [package]
-name = "data-struct"
-version = "0.1.0"
 authors = ["tragedyhk <alex99hk@gmail.com>"]
 edition = "2018"
+name = "data-struct"
+version = "0.1.0"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 

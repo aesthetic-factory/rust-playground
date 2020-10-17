@@ -15,5 +15,6 @@ fn main() {
     //r#struct::print_struct();
     //union::print_union();
     //vector::print_vector();
-    hash_map::print_hash_map();
+    vector::simd_benechmark();
+    //hash_map::print_hash_map();
 }
