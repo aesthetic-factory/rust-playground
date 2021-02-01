@@ -6,6 +6,7 @@ mod r#struct;
 mod tuple;
 mod union;
 mod vector;
+mod r#enum;
 
 fn main() {
     //numeric::print_num();
@@ -15,6 +16,7 @@ fn main() {
     //r#struct::print_struct();
     //union::print_union();
     //vector::print_vector();
-    vector::simd_benechmark();
+    //vector::simd_benechmark();
     //hash_map::print_hash_map();
+    r#enum::print_enum();
 }

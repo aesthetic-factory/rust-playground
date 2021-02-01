@@ -19,6 +19,7 @@ fn fibonacci_thread(input: u64) -> JoinHandle<u64>{
     return t;
 }
 
+#[allow(dead_code)]
 pub fn print_thread() {
     let start_st = Instant::now();
     fibonacci(300);
