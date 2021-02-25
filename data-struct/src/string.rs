@@ -1,6 +1,8 @@
 // https://stackoverflow.com/questions/24158114/what-are-the-differences-between-rusts-string-and-str
 // https://www.ameyalokare.com/rust/2017/10/12/rust-str-vs-String.html
 
+use utility_plus_rs;
+
 #[allow(dead_code)]
 
 pub fn print_string() {
@@ -11,4 +13,6 @@ pub fn print_string() {
     let _string = String::from("Hello world"); // heap allocated
     println!("Print string: {:?}", _string);
     println!("Length of _string: {:?}", _string.len());
+
+    utility_plus_rs::read_text_file;
 }
